@@ -1,4 +1,4 @@
-name: Test action
+name: Test
 
 on:
   push:
@@ -43,7 +43,7 @@ jobs:
         uses: ./
         with:
           server_address: ${{secrets.ADDRESS}}
-          server_port: 465
+          server_port: ${{secrets.PORT}}
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
           subject: ${{github.repository}}
