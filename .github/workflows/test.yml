@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Send mail
+      - name: stopstopstop mail-action
         uses: ./
         with:
           server_address: ${{secrets.ADDRESS}}
