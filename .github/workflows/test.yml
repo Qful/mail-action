@@ -36,10 +36,11 @@ jobs:
               _italics_
               - bullet 1
               - bullet 2
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: stopstopstop mail-action
+      - name: mail-action
         uses: ./
         with:
           server_address: ${{secrets.ADDRESS}}
@@ -49,7 +50,8 @@ jobs:
           subject: ${{github.repository}}
           body: ${{matrix.body}}
           to: ${{github.event.pusher.email}}
-          from: github-actions
+          from: stopstopstop
+          attachments: ${{matrix.attachments}}
           content_type: ${{matrix.content_type}}
           convert_markdown: ${{matrix.convert_markdown}}
-          attachments: ${{matrix.attachments}}
+
